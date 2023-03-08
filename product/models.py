@@ -9,7 +9,7 @@ from utils import utils
 
 class Product(models.Model):
     name = models.CharField(max_length=255)
-    short_dscription = models.TextField(max_length=255)
+    short_description = models.TextField(max_length=255)
     long_description = models.TextField()
     image = models.ImageField(upload_to='product_images/%Y/%m/', blank=True, null=True)
     slug = models.SlugField(unique=True, blank=True, null=True)
@@ -68,7 +68,7 @@ class Variation(models.Model):
     name = models.CharField(max_length=50, blank=True, null=True)
     price = models.FloatField()
     promotional_price = models.FloatField(default=0)
-    stock = models.PositiveBigIntegerField(default=1)
+    stock = models.PositiveIntegerField(default=1)
 
     def __str__(self):
         return self.name or self.product.name
