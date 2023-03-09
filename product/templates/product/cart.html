@@ -7,8 +7,8 @@
 
         <div class="row mt-3">
             <div class="col">
-                <h3>Carrinho de compras</h3>
-                <p class="lead">Os produtos, quantidades e preços que você escolheu.</p>
+                <h3>Shopping cart</h3>
+                <p class="lead">The products, quantities and prices you have chosen.</p>
 
                 <div class="table-responsive">
                     <table class="table">
@@ -59,20 +59,20 @@
 
         <div class="row mt-3">
             <div class="col-lg">
-                <p class='lead'>Total no carrinho</p>
+                <p class='lead'>Cart total</p>
 
                 <div class='table-responsive'>
                     <table class="table">
                         <tr>
                             <td class="font-weight-bold">Total</td>
-                            <td>R$100000</td>
+                            <td>{{cart | total_cart | format_price}}</td>
                         </tr>
                     </table>
                 </div>
             </div>
             <div class="col-lg mt-auto">
                 <a class="btn btn-lg btn-block btn-primary" href="#">
-                    Finalizar a compra
+                    Checkout
                 </a>
             </div>
         </div>
