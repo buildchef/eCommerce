@@ -28,13 +28,13 @@
                                 <td>
                                     <a href="{%url 'product:detail' line.slug%}">
                                     {{line.product_name}}</a>
-                                    <a class="ml-3" href="#">
-                                        <i class="fas fa-times-circle text-danger" aria-hidden="true"></i>
+                                    <a class="ml-3" href="{% url 'product:removefromcart'%}?vid={{line.variation_id}}">
+                                        <i class="fa fa-fw fa-trash" aria-hidden="true"></i>
                                     </a>
                                 </td>
                                 <td>{{line.variation_name}}
                                 </td>
-                              
+                                    
                                 <td>{{line.quantity}} x 
                                     {% if line.unit_promotional_price %}
                                     {{line.unit_promotional_price | format_price}}
