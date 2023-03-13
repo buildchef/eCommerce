@@ -8,7 +8,7 @@ from . import forms, models
 # Create your views here.
 
 class BaseProfile(View):
-    template_name = 'profile/create.html'
+    template_name = '_profile/create.html'
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
 
